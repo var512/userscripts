@@ -1,6 +1,6 @@
 # userscripts
 
-My personal [userscripts](https://en.wikipedia.org/wiki/Userscript).
+My personal [userscripts](https://en.wikipedia.org/wiki/Userscript). Install from [OpenUserJS](https://openuserjs.org/users/var512) or [GreasyFork](https://greasyfork.org/users/222767-var512).
 
 🔁 Loop video files
 ------
