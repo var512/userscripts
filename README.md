@@ -4,7 +4,7 @@ My personal [userscripts](https://en.wikipedia.org/wiki/Userscript).
 
 🔁 Loop video files
 ------
-Sets the loop attribute when viewing video files *individually*. The reason for `document-start` is that certain userscript extensions aren't working without it.
+Sets the loop attribute when viewing video files in their own window/tab. Certain userscript extensions requires `document-start` to work.
 
 ▶️ YouTube - Channel redirector
 ------
