@@ -8,4 +8,4 @@ Sets the loop attribute when viewing video files in their own window/tab. Certai
 
 ▶️ YouTube - Channel redirector
 ------
-Redirects a channel to the videos tab. Links are not replaced and events are not observed. Mainly used for when entering YouTube channels from social media or external links.
+Redirects the channel from featured to videos tab. Only for direct URL access, links are not replaced and events are not observed. Mainly used for when entering YouTube channels from social media or external links.
