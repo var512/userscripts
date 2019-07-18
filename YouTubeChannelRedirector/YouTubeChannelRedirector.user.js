@@ -3,7 +3,7 @@
 // @description  Redirects the channel from featured to videos tab. Only for direct URL access.
 // @namespace    var512
 // @author       var512
-// @version      0.0.2
+// @version      1.0.0
 // @supportURL   https://gitlab.com/var512
 // @supportURL   https://github.com/var512
 // @include      /^https?:\/\/(www\.)?youtube\.com\/(channel|user)\/([a-zA-Z0-9_-]+)\/?(featured)?$/
@@ -14,9 +14,9 @@
 // @run-at       document-start
 // ==/UserScript==
 
-(function () {
-    "use strict";
+(() => {
+  window.stop();
+  const newUrl = document.URL.replace(/(\/featured)?(\/)?$/, '');
 
-    window.stop();
-    window.location.replace(document.URL.replace(/(\/featured)?(\/)?$/, '') + '/videos');
+  window.location.replace(`${newUrl}/videos`);
 })();
