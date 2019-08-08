@@ -4,6 +4,10 @@ My personal [userscripts](https://en.wikipedia.org/wiki/Userscript). Install fro
 
 *They are very opinionated and made to fit my personal workflow (JavaScript disabled, no active session or cookies).*
 
+🖼️ Imgur - Page redirector
+---
+Redirects Imgur pages to images, videos or album download.
+
 🔁 Loop video files
 ------
 Sets the loop attribute when viewing video files in their own window/tab. Certain userscript extensions requires `document-start` to work.
