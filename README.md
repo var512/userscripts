@@ -2,6 +2,8 @@
 
 My personal [userscripts](https://en.wikipedia.org/wiki/Userscript). Install from [OpenUserJS](https://openuserjs.org/users/var512) or [GreasyFork](https://greasyfork.org/users/222767-var512).
 
+*They are very opinionated and made to fit my personal workflow (JavaScript disabled, no active session or cookies).*
+
 🔁 Loop video files
 ------
 Sets the loop attribute when viewing video files in their own window/tab. Certain userscript extensions requires `document-start` to work.
