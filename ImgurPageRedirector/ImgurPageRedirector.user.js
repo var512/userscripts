@@ -3,7 +3,7 @@
 // @description  Redirects Imgur pages to images, videos or album download.
 // @namespace    var512
 // @author       var512
-// @version      0.0.1
+// @version      0.0.2
 // @supportURL   https://gitlab.com/var512
 // @supportURL   https://github.com/var512
 // @include      /^https?:\/\/(www\.)?imgur\.com\/(.+)/
@@ -12,7 +12,7 @@
 // @license      MIT
 // @noframes
 // @grant        none
-// @run-at       document-start
+// @run-at       document-end
 // ==/UserScript==
 
 (() => {
