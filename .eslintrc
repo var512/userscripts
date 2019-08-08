@@ -3,5 +3,8 @@
     "browser": true,
     "greasemonkey": true
   },
-  "extends": "airbnb-base"
+  "extends": "airbnb-base",
+  "rules": {
+    "strict": "off"
+  }
 }

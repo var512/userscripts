@@ -15,6 +15,8 @@
 // ==/UserScript==
 
 (() => {
+  'use strict';
+
   window.stop();
   const newUrl = document.URL.replace(/(\/featured)?(\/)?$/, '');
 

@@ -15,6 +15,8 @@
 // ==/UserScript==
 
 (() => {
+  'use strict';
+
   const elements = document.getElementsByTagName('video');
 
   if (elements.item(0) !== null) {
