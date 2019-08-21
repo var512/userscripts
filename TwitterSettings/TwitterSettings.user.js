@@ -18,7 +18,7 @@
   'use strict';
 
   const dom = {
-    observe: function observeMutationsAndDisconnect(params) {
+    observe(params) {
       new MutationObserver((mutations, observer) => {
         const el = document.querySelector(params.selector);
         if (el) {
@@ -30,7 +30,7 @@
         childList: true,
       });
     },
-    remove: function removeElement(el) {
+    remove(el) {
       const domEl = document.querySelector(el);
       if (domEl) {
         domEl.remove();
