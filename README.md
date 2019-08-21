@@ -10,7 +10,7 @@ Redirects Imgur pages to images, videos or album download.
 
 🔁 Loop video files
 ------
-Sets the loop attribute when viewing video files in their own window/tab. Certain userscript extensions requires `document-start` to work.
+Sets the loop attribute when viewing video files in their own window/tab.
 
 🐦 Twitter - Settings
 ------
