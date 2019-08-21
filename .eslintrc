@@ -1,7 +1,11 @@
 {
   "env": {
     "browser": true,
+    "es6": true,
     "greasemonkey": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2019
   },
   "extends": "airbnb-base",
   "rules": {
