@@ -3,7 +3,7 @@
 // @description  Redirects Imgur pages to images, videos or album download.
 // @namespace    var512
 // @author       var512
-// @version      0.0.2
+// @version      0.0.3
 // @supportURL   https://gitlab.com/var512
 // @supportURL   https://github.com/var512
 // @include      /^https?:\/\/(www\.)?imgur\.com\/(.+)/
@@ -44,23 +44,21 @@
 
   window.stop();
 
-  if (['a', 'gallery'].indexOf(splitPath[1]) >= 0 && ['zip'].indexOf(splitPath[2]) === -1) {
+  const isGallery = ['a', 'gallery'].indexOf(splitPath[1]) >= 0 && ['zip'].indexOf(splitPath[2]) === -1;
+  const isSingleImageGallery = document.querySelectorAll('.post-image-container').length === 1;
+  isDebugEnabled && console.log(`isGallery: ${isGallery} | isSingleImageGallery: ${isSingleImageGallery}`);
+
+  if (isGallery && isSingleImageGallery === false) {
     window.location.replace(`https://imgur.com/a/${splitPath[2]}/zip`);
     return;
   }
 
-  const imageSrc = document.querySelector('link[rel="image_src"]');
-  const isImage = imageSrc !== null;
-  isDebugEnabled && console.log(`isImage: ${isImage}`);
-
-  let extension = 'gifv';
-
-  if (isImage) {
-    extension = imageSrc.attributes.getNamedItem('href').value.split('.').pop();
-  }
-
-  const newUrl = `https://i.imgur.com/${splitPath[1]}.${extension}`;
-
+  const contentType = document.querySelectorAll('meta[property="og:video"]').length > 0 ? 'video' : 'image';
+  const ogUrl = document.querySelector(`meta[property="og:${contentType}"]`).attributes.getNamedItem('content').value;
+  const newUrl = ogUrl.split('?').shift();
+  isDebugEnabled && console.log(`contentType: ${contentType}`);
+  isDebugEnabled && console.log(`ogUrl: ${ogUrl}`);
   isDebugEnabled && console.log(`newUrl: ${newUrl}`);
+
   window.location.replace(newUrl);
 })();
