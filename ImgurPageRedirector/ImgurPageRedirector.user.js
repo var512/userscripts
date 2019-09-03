@@ -20,9 +20,9 @@
 
   const isDebugEnabled = false;
   const imgurUrl = new URL(document.URL);
+  isDebugEnabled && console.log(`imgurUrl: ${imgurUrl}`);
 
   if (typeof imgurUrl !== 'object') {
-    isDebugEnabled && console.log(`invalid URL: ${imgurUrl}`);
     return;
   }
 
@@ -36,7 +36,7 @@
   // response.status workaround
   const pageTitle = document.querySelector('title');
   const isResponseNotFound = pageTitle && pageTitle.innerText.includes('404 page');
-  isDebugEnabled && console.log(`is 404: ${isResponseNotFound}`);
+  isDebugEnabled && console.log(`isResponseNotFound: ${isResponseNotFound}`);
 
   if (isResponseNotFound) {
     return;
@@ -51,7 +51,7 @@
 
   const imageSrc = document.querySelector('link[rel="image_src"]');
   const isImage = imageSrc !== null;
-  isDebugEnabled && console.log(`is image: ${isImage}`);
+  isDebugEnabled && console.log(`isImage: ${isImage}`);
 
   let extension = 'gifv';
 
@@ -61,6 +61,6 @@
 
   const newUrl = `https://i.imgur.com/${splitPath[1]}.${extension}`;
 
-  isDebugEnabled && console.log(`redirect: ${newUrl}`);
+  isDebugEnabled && console.log(`newUrl: ${newUrl}`);
   window.location.replace(newUrl);
 })();
