@@ -35,7 +35,7 @@
 
   // response.status workaround
   const pageTitle = document.querySelector('title');
-  const isResponseNotFound = pageTitle && pageTitle.innerHTML.includes('404 page');
+  const isResponseNotFound = pageTitle && pageTitle.innerText.includes('404 page');
   isDebugEnabled && console.log(`is 404: ${isResponseNotFound}`);
 
   if (isResponseNotFound) {
