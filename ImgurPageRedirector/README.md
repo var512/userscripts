@@ -1,6 +1,3 @@
-# File type detection
-`<link rel="image_src" href="https://i.imgur.com/${ID}.${EXT}"/>`
-
 # Exclude
 - `https://imgur.com/about`
 - `https://imgur.com/privacy`
