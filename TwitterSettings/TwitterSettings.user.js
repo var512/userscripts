@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Twitter - Settings
+// @name         [DEPRECATED] Twitter - Settings
 // @description  My personal settings for browsing Twitter with JavaScript disabled.
 // @namespace    var512
 // @author       var512
