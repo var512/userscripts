@@ -4,14 +4,14 @@ My personal [userscripts](https://en.wikipedia.org/wiki/Userscript). Install fro
 
 *They are very opinionated and made to fit my personal workflow (JavaScript disabled, no active session or cookies).*
 
-🖼️ Imgur - Page redirector
+Imgur - Page redirector
 ---
 Redirects Imgur pages to images, videos or album download.
 
-🔁 Loop video files
+Loop video files
 ------
 Sets the loop attribute when viewing video files in their own window/tab.
 
-▶️ YouTube - Channel redirector
+YouTube - Channel redirector
 ------
 Redirects the channel from featured to videos tab. Only for direct URL access, links are not replaced and events are not observed. Mainly used for when entering YouTube channels from social media or external links.
