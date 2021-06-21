@@ -49,6 +49,7 @@
   isDebugEnabled && console.log(`isGallery: ${isGallery} | isSingleImageGallery: ${isSingleImageGallery}`);
 
   if (isGallery && isSingleImageGallery === false) {
+    isDebugEnabled && console.log('redirecting gallery to zip download...');
     window.location.replace(`https://imgur.com/a/${splitPath[2]}/zip`);
     return;
   }
@@ -59,6 +60,7 @@
   isDebugEnabled && console.log(`contentType: ${contentType}`);
   isDebugEnabled && console.log(`ogUrl: ${ogUrl}`);
   isDebugEnabled && console.log(`newUrl: ${newUrl}`);
+  isDebugEnabled && console.log('redirecting...');
 
   window.location.replace(newUrl);
 })();
