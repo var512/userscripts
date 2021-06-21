@@ -3,10 +3,10 @@
 // @description  Redirects Imgur pages to images, videos or album download.
 // @namespace    var512
 // @author       var512
-// @version      0.0.3
+// @version      0.0.4
 // @supportURL   https://gitlab.com/var512
 // @supportURL   https://github.com/var512
-// @include      /^https?:\/\/(www\.)?imgur\.com\/(.+)/
+// @include      /^https?:\/\/(i\.|www\.)?imgur\.com\/(.+)/
 // @exclude      /^https?:\/\/(www\.)?imgur\.com\/(about|privacy|search|upload|t\/)(.*)/
 // @icon         https://imgur.com/favicon.ico
 // @license      MIT
@@ -39,6 +39,18 @@
   isDebugEnabled && console.log(`isResponseNotFound: ${isResponseNotFound}`);
 
   if (isResponseNotFound) {
+    return;
+  }
+
+  const isDirectLink = imgurUrl.host.includes('i.imgur.com');
+  isDebugEnabled && console.log(`isDirectLink: ${isDirectLink}`);
+
+  if (isDirectLink === true) {
+    // .gifv URLs are redirects (not a video content-type)
+    if (imgurUrl.href.endsWith('.gifv')) {
+      isDebugEnabled && console.log('redirecting gifv to mp4...');
+      window.location.replace(imgurUrl.href.replace(/.gifv$/i, '.mp4'));
+    }
     return;
   }
 
